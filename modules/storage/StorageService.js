@@ -1,4 +1,4 @@
-FarmClickerApp.service('harvest', function(){
+FarmClickerApp.service('storage', function(){
   var maxStorage = 200;
 
   this.getMaxStorage = function(){
@@ -8,4 +8,5 @@ FarmClickerApp.service('harvest', function(){
   this.increaseMaxStorage = function(amount){
     maxStorage += amount;
   };
+
 });
