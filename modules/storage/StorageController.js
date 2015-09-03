@@ -14,7 +14,6 @@ FarmClickerApp.controller('StorageController', ['$scope', '$http', 'harvest', 's
     storage.increaseMaxStorage(amount);
   };
 
-  //TODO: This is very similar to the one in productivity controller. abstract into application controller?
   $scope.clickSilo = function(upgrade){
     if (harvest.getCropsHarvested() >= upgrade.price) {
             harvest.deductFromHarvest(upgrade.price);
@@ -24,5 +23,7 @@ FarmClickerApp.controller('StorageController', ['$scope', '$http', 'harvest', 's
             upgrade.price += Math.floor(upgrade.price * upgrade.increase)
         }
   };
+
+  //TODO: make sure crops harvested never goes above max storage amount
 
 }]);
