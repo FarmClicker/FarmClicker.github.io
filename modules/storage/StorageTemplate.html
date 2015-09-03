@@ -1,1 +1,11 @@
-Storage Test
+<div ng-controller="StorageController">
+  <h3>Max Storage: {{getMaxStorage()}} Crops</h3>
+
+  <table align="center">
+      <tr ng-repeat="upgrade in storageUpgrades" ng-click="clickSilo(upgrade)" class="pointer" ng-class="unavailable(upgrade)">
+        <td><img ng-src="{{upgrade.image}}" height="100px" width="100px"/></td>
+        <td><h4>{{upgrade.bought}}</h4></td>
+        <td><h4>Buy Silo <p><small>Costs: {{upgrade.price}} crops</small></p></h4></td>
+      </tr>
+  </table>
+</div>
