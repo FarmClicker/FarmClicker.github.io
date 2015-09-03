@@ -32,8 +32,12 @@ FarmClickerApp.service('harvest', function(){
     harvestPerSec += amount;
   };
 
-  this.unavailable = function(upgrade){
-    if (cropsHarvested < upgrade.price)
+  this.increaseHarvestPerClick = function(amount){
+    harvestPerClick += amount;
+  };
+
+  this.unavailable = function(object){
+    if (cropsHarvested < object.price)
       return "unavailable";
   };
 
