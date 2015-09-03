@@ -1,0 +1,7 @@
+<div ng-controller="HarvestController">
+  <h2>{{getCropsHarvested() | number:0}} Crops Harvested</h2>
+  <h4>{{getHarvestPerSec() | number:1}} Crops Harvested per second</h4>
+  <div ng-mousedown="smallHarvestCropButton=true" ng-mouseup="smallHarvestCropButton=false">
+    <img ng-class="{'littleHarvest':smallHarvestCropButton}" class="shrink" ng-click="harvestCrops()" ng-src="{{getHarvestCropButton()}}" height="300px" width="300px"/>
+  </div>
+</div>

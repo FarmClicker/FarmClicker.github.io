@@ -1,0 +1,28 @@
+.gameBoard {
+  text-align: center;
+}
+
+.mainContent {
+    margin-top: 60px;
+}
+
+.littleHarvest {width:290px; height:290px;}
+
+.little {width:90px; height:90px;}
+
+.resetlink, .shrink, .pointer {
+  cursor:pointer;
+}
+
+.unavailable {
+  opacity: 0.3;
+  cursor:default;
+}
+
+h5 {
+  font-style: italic;
+}
+
+td {
+    padding: 15px;
+}

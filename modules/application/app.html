@@ -1,0 +1,18 @@
+<div ng-controller="ApplicationController" class="container">
+  <div class="container mainContent gameBoard">
+    <div class="row">
+      <div class="col-md-4">
+        <div ng-include src="'modules/productivity/ProductivityTemplate.html'"></div>
+      </div>
+      <div class="col-md-4">
+        <div ng-include src="'modules/harvest/HarvestTemplate.html'"></div>
+      </div>
+      <div class="col-md-4">
+        <div ng-include src="'modules/crops/CropsTemplate.html'"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div ng-include src="'modules/storage/StorageTemplate.html'"></div>
+    </div>
+  </div>
+</div>
