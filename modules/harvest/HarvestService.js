@@ -28,6 +28,10 @@ FarmClickerApp.service('harvest', function(){
     return harvestPerSec;
   };
 
+  this.getHarvestPerClick = function(){
+    return harvestPerClick;
+  };
+
   this.increaseHarvestPerSec = function(amount){
     harvestPerSec += amount;
   };

@@ -1,4 +1,4 @@
-FarmClickerApp.controller('HarvestController', ['$scope', '$http', 'harvest', function($scope, $http, harvest){
+FarmClickerApp.controller('HarvestController', ['$scope', '$http', 'harvest', 'storage', function($scope, $http, harvest, storage){
 
   // $scope.harvestData = {};
   //
@@ -20,7 +20,8 @@ FarmClickerApp.controller('HarvestController', ['$scope', '$http', 'harvest', fu
 
   $scope.harvestCrops = function(){
     // $scope.pulseToggle = !$scope.pulseToggle
-    harvest.harvestCrops();
+    if (harvest.getCropsHarvested() + harvest.getHarvestPerClick() <= storage.getMaxStorage())
+      harvest.harvestCrops();
   };
 
 }]);
