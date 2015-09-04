@@ -20,10 +20,9 @@ FarmClickerApp.controller('StorageController', ['$scope', '$http', 'harvest', 's
             storage.increaseMaxStorage(upgrade.increaseStorageBy);
 
             upgrade.bought += 1;
-            upgrade.price += Math.floor(upgrade.price * upgrade.increase)
+            upgrade.price += upgrade.increase;
         }
   };
 
-  //TODO: make sure crops harvested never goes above max storage amount
 
 }]);
