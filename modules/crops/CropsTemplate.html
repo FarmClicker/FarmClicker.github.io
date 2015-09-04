@@ -2,9 +2,9 @@
   <h3>Crops</h3>
   <h5>Increases harvest per click</h5>
 
-  <table>
+  <table align="center">
       <tr ng-repeat="crop in cropsData" ng-click="clickCrop(crop)" class="pointer" ng-class="unavailable(crop)" ng-hide="crop.bought">
-        <td><img ng-src="{{crop.image}}" height="100px" width="100px"/></td>
+        <td><img ng-src="{{crop.image}}" height="50px" width="50px"/></td>
         <td><h4>Plant {{crop.name}} <p><small>Costs: {{crop.price}} crops</small></p></h4></td>
       </tr>
   </table>

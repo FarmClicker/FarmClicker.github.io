@@ -8,8 +8,6 @@
 
 .littleHarvest {width:290px; height:290px;}
 
-.little {width:90px; height:90px;}
-
 .resetlink, .shrink, .pointer {
   cursor:pointer;
 }
@@ -24,5 +22,5 @@ h5 {
 }
 
 td {
-    padding: 15px;
+    padding: 10px;
 }
