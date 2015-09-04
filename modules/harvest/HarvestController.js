@@ -22,6 +22,9 @@ FarmClickerApp.controller('HarvestController', ['$scope', '$http', 'harvest', 's
     // $scope.pulseToggle = !$scope.pulseToggle
     if (harvest.getCropsHarvested() + harvest.getHarvestPerClick() <= storage.getMaxStorage())
       harvest.harvestCrops();
+    else {
+      harvest.addToHarvest(storage.getMaxStorage() - harvest.getCropsHarvested());
+    }
   };
 
 }]);
