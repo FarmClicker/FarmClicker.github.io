@@ -5,14 +5,19 @@ FarmClickerApp.controller('ApplicationController', ['$scope', '$interval', 'harv
     return harvest.unavailable(object);
   };
 
-  // Run UI update code every 100ms
+  // Run UI update code every second
   //TODO: fix this
   $interval(function() {
-    if (harvest.getCropsHarvested() + harvest.getHarvestPerSec()/10 <= storage.getMaxStorage())
-      harvest.addToHarvest(harvest.getHarvestPerSec()/10);
+    var cropsHarvested = harvest.getCropsHarvested();
+    var harvestPerSec = harvest.getHarvestPerSec();
+    var maxStorage = storage.getMaxStorage();
+    if (cropsHarvested + harvestPerSec/1 <= maxStorage){
+      // var cropsHarvested = Math.floor(harvest.getCropsHarvested());
+      harvest.addToHarvest(harvestPerSec/1);
+    }
     else {
-      harvest.addToHarvest(storage.getMaxStorage() - harvest.getCropsHarvested());
+      harvest.addToHarvest(maxStorage - cropsHarvested);
     }
 
-  }, 100);
+  }, 1000);
 }]);
